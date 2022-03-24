@@ -4,12 +4,14 @@
       sto caricando i dati
       <div><i class="fas fa-spinner"></i></div>
     </div>
-    <div v-else class="container container-card">
-      <SongsSpotify v-for="song in arrSongs" :key="song.title"
-      :img="song.poster"
-      :song="song.title"
-      :author="song.author"
-      :date="song.year"/>
+    <div v-else class="container">
+      <div class="row justify-content-center">
+        <SongsSpotify v-for="song in arrSongs" :key="song.title"
+        :img="song.poster"
+        :song="song.title"
+        :author="song.author"
+        :date="song.year"/>
+      </div>
     </div>
   </main>
 </template>
@@ -44,11 +46,6 @@ export default {
   main{
     min-height: calc(100vh - 5rem);
     background-color: #212D3A;
-  }
-  .container-card{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
   .fas{
     font-size: 3rem;

@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <img :src="img" alt="">
+  <div class="card mx-3 my-4">
+    <img :src="img" alt="" >
     <h4>{{song}}</h4>
     <div>{{author}}</div>
     <div>{{date}}</div>
@@ -26,7 +26,6 @@ export default {
   text-align: center;
   color: grey;
   width: 200px;
-  margin: 1rem;
   background-color: #303A45;
   img{
     width: 100%;
