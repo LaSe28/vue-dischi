@@ -1,11 +1,9 @@
 <template>
-  <div class="row">
-    <div class="card">
-      <img :src="img" alt="">
-      <h4>{{song}}</h4>
-      <div>{{author}}</div>
-      <div>{{date}}</div>
-    </div>
+  <div class="card">
+    <img :src="img" alt="">
+    <h4>{{song}}</h4>
+    <div>{{author}}</div>
+    <div>{{date}}</div>
   </div>
 </template>
 
@@ -28,7 +26,7 @@ export default {
   text-align: center;
   color: grey;
   width: 200px;
-  margin: 2rem;
+  margin: 1rem;
   background-color: #303A45;
   img{
     width: 100%;
