@@ -46,9 +46,9 @@ export default {
     background-color: #212D3A;
   }
   .container-card{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .fas{
     font-size: 3rem;

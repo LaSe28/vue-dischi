@@ -28,7 +28,7 @@ export default {
   text-align: center;
   color: grey;
   width: 200px;
-  margin: 1rem;
+  margin: 2rem;
   background-color: #303A45;
   img{
     width: 100%;
