@@ -1,10 +1,12 @@
 <template>
+  <div class="row">
     <div class="card">
-      <img :src="img" alt="" class="img-fluid">
+      <img :src="img" alt="">
       <h4>{{song}}</h4>
       <div>{{author}}</div>
       <div>{{date}}</div>
     </div>
+  </div>
 </template>
 
 <script>

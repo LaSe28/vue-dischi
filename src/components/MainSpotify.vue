@@ -5,13 +5,11 @@
       <div><i class="fas fa-spinner"></i></div>
     </div>
     <div v-else class="container container-card">
-      <div class="row">
-        <SongsSpotify v-for="song in arrSongs" :key="song.title"
-        :img="song.poster"
-        :song="song.title"
-        :author="song.author"
-        :date="song.year"/>
-      </div>
+      <SongsSpotify v-for="song in arrSongs" :key="song.title"
+      :img="song.poster"
+      :song="song.title"
+      :author="song.author"
+      :date="song.year"/>
     </div>
   </main>
 </template>
@@ -49,6 +47,7 @@ export default {
   }
   .container-card{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   }
   .fas{
