@@ -6,7 +6,7 @@
     </div>
     <div v-else class="container">
       <div class="row justify-content-center">
-        <SongsSpotify v-for="song in arrSongs" :key="song.title"
+        <SongsSpotify v-for="song in changedValue" :key="song.title"
         :img="song.poster"
         :song="song.title"
         :author="song.author"
@@ -25,9 +25,17 @@ export default {
   components: {
     SongsSpotify
   },
+  props: {
+    valueChange: String
+  },
   data () {
     return {
       arrSongs: null
+    }
+  },
+  computed: {
+    changedValue () {
+      return this.arrSongs.filter((objSongs) => objSongs.genre.toLowerCase().includes(this.valueChange.toLowerCase()))
     }
   },
   created () {
@@ -35,7 +43,6 @@ export default {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((res) => {
           this.arrSongs = res.data.response
-          console.log(this.arrSongs)
         })
     }, 3000)
   }
