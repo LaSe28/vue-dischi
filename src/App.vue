@@ -23,7 +23,6 @@ export default {
   methods: {
     selected (valueSelected) {
       this.valueSelected = valueSelected
-      console.log(this.valueSelected)
     }
   }
 }
