@@ -37,11 +37,8 @@ export default {
   },
   computed: {
     changedValue () {
-      if (this.valueAutChange === '') {
-        return this.arrSongs.filter((objSongs) => objSongs.genre.toLowerCase().includes(this.valueGenChange.toLowerCase()))
-      } else {
-        return this.arrSongs.filter((objSongs1) => objSongs1.author.toLowerCase().includes(this.valueAutChange.toLowerCase()))
-      }
+      return this.arrSongs.filter((objSongs) => objSongs.genre.toLowerCase().includes(this.valueGenChange.toLowerCase()) &&
+      objSongs.author.toLowerCase().includes(this.valueAutChange.toLowerCase()))
     }
   },
   created () {
