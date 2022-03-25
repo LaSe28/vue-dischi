@@ -1,6 +1,6 @@
 <template>
     <select @change="value" name="" id="gen">
-      <option value="">Tutti</option>
+      <option value="">Seleziona Genere</option>
       <option value="Rock">Rock</option>
       <option value="Metal">Metal</option>
       <option value="Jazz">Jazz</option>
@@ -10,14 +10,15 @@
 
 <script>
 export default {
+  name: 'SelectGen',
   data () {
     return {
     }
   },
   methods: {
     value () {
-      const valueChose = document.querySelector('#gen').value
-      this.$emit('change', valueChose)
+      const genere = document.querySelector('#gen').value
+      this.$emit('changeGen', genere)
     }
   }
 
@@ -26,6 +27,6 @@ export default {
 
 <style lang="scss" scoped>
   select{
-        margin-right: 20rem;
-      }
+    margin: 0.5rem;
+  }
 </style>

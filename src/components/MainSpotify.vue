@@ -26,7 +26,9 @@ export default {
     SongsSpotify
   },
   props: {
-    valueChange: String
+    valueGenChange: String,
+    valueAutChange: String
+
   },
   data () {
     return {
@@ -35,7 +37,11 @@ export default {
   },
   computed: {
     changedValue () {
-      return this.arrSongs.filter((objSongs) => objSongs.genre.toLowerCase().includes(this.valueChange.toLowerCase()))
+      if (this.valueAutChange === '') {
+        return this.arrSongs.filter((objSongs) => objSongs.genre.toLowerCase().includes(this.valueGenChange.toLowerCase()))
+      } else {
+        return this.arrSongs.filter((objSongs1) => objSongs1.author.toLowerCase().includes(this.valueAutChange.toLowerCase()))
+      }
     }
   },
   created () {

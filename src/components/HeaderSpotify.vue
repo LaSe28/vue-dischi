@@ -1,20 +1,26 @@
 <template>
   <header >
-    <SelectGen @change="changeDone"/>
+    <SelectGen @changeGen="changeGenDone"/>
+    <SelectAuthor @changeAut="changeAutDone"/>
   </header>
 </template>
 
 <script>
 import SelectGen from './SelectGenSpotify.vue'
+import SelectAuthor from './SelectAuthorSpotify.vue'
 
 export default {
   name: 'HeaderSpotify',
   components: {
-    SelectGen
+    SelectGen,
+    SelectAuthor
   },
   methods: {
-    changeDone (value) {
-      this.$emit('changedGen', value)
+    changeGenDone (valueGen) {
+      this.$emit('changedGen', valueGen)
+    },
+    changeAutDone (valueAut) {
+      this.$emit('changedAut', valueAut)
     }
   }
 }
@@ -25,7 +31,7 @@ export default {
     height: 5rem;
     background-color: #303A45;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
   }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <HeaderSpotify @changedGen="selected"/>
-    <MainSpotify :valueChange="valueSelected"/>
+    <HeaderSpotify @changedGen="selectedGen" @changedAut="selectedAut"/>
+    <MainSpotify :valueGenChange="valueGenSelected"
+    :valueAutChange="valueAutSelected"
+    />
   </div>
 </template>
 
@@ -13,7 +15,8 @@ export default {
   name: 'App',
   data () {
     return {
-      valueSelected: ''
+      valueGenSelected: '',
+      valueAutSelected: ''
     }
   },
   components: {
@@ -21,8 +24,11 @@ export default {
     MainSpotify
   },
   methods: {
-    selected (valueSelected) {
-      this.valueSelected = valueSelected
+    selectedGen (valueGenSelected) {
+      this.valueGenSelected = valueGenSelected
+    },
+    selectedAut (valueAutSelected) {
+      this.valueAutSelected = valueAutSelected
     }
   }
 }
